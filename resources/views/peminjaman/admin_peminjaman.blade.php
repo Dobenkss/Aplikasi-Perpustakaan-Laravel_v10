@@ -54,7 +54,7 @@
                                 </td>
                                 <td>
                                     @if ($pinjam->status == 'Dipinjam')
-                                        <form action="/peminjaman/update-status/{{ $pinjam->id }}" method="POST" onclick="return confirmAction('Apakah Anda yakin ingin approve peminjaman ini?', this)">
+                                        <form action="/peminjaman/update-status/{{ $pinjam->id }}" method="POST" onclick="return confirmAction('Apakah Anda yakin peminjaman buku ini telah dikembalikan?', this)">
                                             @csrf
                                             @method('PUT')
                                             <input type="hidden" name="status" value="Dikembalikan">
